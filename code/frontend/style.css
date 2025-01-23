@@ -1,0 +1,500 @@
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Chart Layout */
+.chart-container {
+    display: flex;
+    justify-content: space-around; /* Evenly space charts */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.chart-canvas {
+    max-width: 300px;
+    max-height: 300px;
+    display: none; /* Hide initially */
+}
+
+.chart-container-wrapper {
+    display: flex;          /* Use Flexbox for layout */
+    justify-content: space-between; /* Distribute space evenly between charts */
+    align-items: center;    /* Align charts vertically */
+    margin-top: 20px;       /* Add some spacing above the charts */
+}
+
+.chart-container {
+    flex: 1;                /* Allow all charts to take up equal space */
+    text-align: center;     /* Center the canvas inside its container */
+    margin: 0 10px;         /* Add some horizontal spacing between charts */
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 20px;
+    padding: 20px; /* Add padding to prevent text from being cut off */
+    width: 100%;
+    min-height: 350px; /* Ensure enough space for the chart or message */
+    position: relative;
+}
+
+#barChartCanvas {
+    width: 80%; /* Ensure it doesn't stretch unnecessarily */
+    height: 300px; /* Maintain proportional height */
+}
+
+/* Login Page Specific Styles */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full-screen height */
+}
+
+.login-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Title Styling */
+.app-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Instruction Text */
+.login-instruction {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Google Button */
+.google-login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.google-login-btn:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02); /* Slight scale on hover */
+}
+
+/* Google Logo */
+.google-logo {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* Button styling */
+#open-filter-dialog {
+    display: inline-flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally align content */
+    gap: 0.5rem; /* Space between icon and text */
+    padding: 10px 15px;
+    font-size: 1rem; /* Adjust button text size */
+}
+
+/* Icon styling */
+.fi.fi-rr-filter-list {
+    font-size: 1.45rem; /* Increase the size of the icon */
+    display: inline-block; /* Treat the icon as a block element for easier alignment */
+    line-height: 1; /* Remove extra vertical spacing */
+}
+
+/* Styles specific to the login page */
+body.login-page {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ec3344, #4be765); /* Green gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden; /* Prevent scrollbars from appearing due to floating icons */
+}
+
+.login-page .login-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark green box */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    z-index: 1; /* Ensure it's above the floating icons */
+}
+
+.login-page h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(246, 240, 240, 0.5);
+    color: white;;
+}
+
+.login-page .description {
+    font-size: 1.2rem;
+    margin: 0 auto 30px;
+    text-align: center;
+    max-width: 400px;
+    color: #fff;
+}
+
+.login-page button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.login-page button:hover {
+    background-color: #ef1e1e;
+    color: #fff;
+}
+
+/* Floating Icons Styling */
+.login-page .floating-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent icons from overflowing */
+    z-index: 0; /* Ensure they appear behind the login container */
+}
+
+.login-page .icon {
+    position: absolute;
+    font-size: 3rem;
+    opacity: 0.8;
+    animation: float 10s linear infinite;
+}
+
+/* Add colors to the icons */
+.left-icon {
+    color: #ff6f61; /* Coral for left icons */
+}
+
+.login-page .icon:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+    color: #ff9f43; /* Orange for coins */
+}
+
+.login-page .icon:nth-child(2) {
+    top: 30%;
+    left: 20%;
+    animation-delay: 1s;
+    color: #ffcd38; /* Yellow for wallet */
+}
+
+.login-page .icon:nth-child(3) {
+    top: 50%;
+    left: 15%;
+    animation-delay: 2s;
+    color: #00cec9; /* Teal for shopping basket */
+}
+
+.login-page .icon:nth-child(4) {
+    top: 70%;
+    left: 5%;
+    animation-delay: 3s;
+    color: #ff7675; /* Red for utensils */
+}
+
+.login-page .icon:nth-child(5) {
+    top: 80%;
+    left: 25%;
+    animation-delay: 4s;
+    color: #6c5ce7; /* Purple for credit card */
+}
+
+.login-page .icon:nth-child(6) {
+    top: 20%;
+    right: 10%;
+    animation-delay: 5s;
+    color: #00b894; /* Green for heartbeat */
+}
+
+.login-page .icon:nth-child(7) {
+    top: 40%;
+    right: 15%;
+    animation-delay: 6s;
+    color: #0984e3; /* Blue for graduation cap */
+}
+
+.login-page .icon:nth-child(8) {
+    top: 60%;
+    right: 5%;
+    animation-delay: 7s;
+    color: #fab1a0; /* Pink for shopping cart */
+}
+
+.login-page .icon:nth-child(9) {
+    top: 75%;
+    right: 20%;
+    animation-delay: 8s;
+    color: #74b9ff; /* Light blue for spa */
+}
+
+.login-page .icon:nth-child(10) {
+    top: 85%;
+    right: 10%;
+    animation-delay: 9s;
+    color: #d63031; /* Red for user friends */
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(15deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* new code for page */
+:root {
+    --primary-color: #4CAF50; /* Default color */
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(#f4f7fa); /* Dynamic for dark/light mode */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.input-group select,
+.input-group input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 180px;
+    box-sizing: border-box;
+}
+
+#add-btn,
+.chart-buttons button,
+#settings-btn {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-btn:hover,
+.chart-buttons button:hover,
+#settings-btn:hover {
+    background-color: var(--primary-color);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+tfoot td {
+    font-weight: bold;
+    text-align: right;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light background for non-dark mode */
+}
+
+body.dark-mode tbody tr:nth-child(even) {
+    background-color: #333; /* Gray background for dark mode */
+}
+
+.delete-btn {
+    background-color: #ff5c5c;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #ff3b3b;
+}
+
+.chart-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    min-height: 350px;
+    position: relative;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+}
+
+/* Dark Mode stuff */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .btn {
+    background-color: #333;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #444;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+.container-fluid {
+    background-color: #ffffff; /* Light background for non-dark mode */
+    color: #333; /* Text color for light mode */
+}
+
+body.dark-mode .container-fluid {
+    background-color: #121212; /* Dark background for dark mode */
+    color: #e0e0e0; /* Light text for dark mode */
+}
+
+body.dark-mode .navbar .navbar-brand {
+    color: #e0e0e0; /* Adjust title color for dark mode */
+}
+
+/* Modal Styling */
+.modal-content {
+    background-color: #fff; /* Default light background */
+    color: #333; /* Default dark text */
+}
+
+body.dark-mode .modal-content {
+    background-color: #1e1e1e; /* Dark background for dark mode */
+    color: #e0e0e0; /* Light text for dark mode */
+    border: 1px solid #333; /* Subtle border for distinction */
+}
+
+/* Modal Header */
+.modal-header {
+    background-color: #f8f9fa; /* Light mode */
+    color: #333; /* Light mode text */
+}
+
+body.dark-mode .modal-header {
+    background-color: #333; /* Dark background */
+    color: #e0e0e0; /* Light text for dark mode */
+}
+
+/* Modal Footer */
+.modal-footer {
+    background-color: #f8f9fa; /* Light mode */
+}
+
+body.dark-mode .modal-footer {
+    background-color: #333; /* Dark mode background */
+}
+
+/* Buttons Inside Modals */
+body.dark-mode .modal-footer .btn {
+    background-color: #444; /* Dark button */
+    color: #e0e0e0; /* Light text */
+}
+
+body.dark-mode .modal-footer .btn:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
