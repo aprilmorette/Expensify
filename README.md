@@ -1,4 +1,4 @@
-Expense Tracker Application
+Expense Tracker Application for Software Engineering Course at Oklahoma State University
 
 Expensify is a web-based tool for managing personal or business finances. This project allows users to track expenses, categorize spending, and visualize financial trends through interactive charts and filters. 
 With user-friendly functionality and customization options, this tool makes managing finances simple and efficient.
